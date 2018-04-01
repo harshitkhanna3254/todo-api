@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JAVASCRIPT VALIDATION FORM</title>
+</head>
+        <style>
+
+            body{
+                    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/03/Beautiful-clouds-wallpaper-hd.jpg");
+                    margin: 20px;
+                    border: black solid 2px;
+            }
+
+            h1{
+                padding: 10px;
+                border: black 2px solid;
+                text-align: center;
+                background: orangered;
+            }
+
+            #form1{
+                padding: 10px;
+                border: black 2px solid;
+                text-align: center;
+                background-color: #3CBC8D;
+                margin-top: 100px;
+            }
+
+            
+        
+        </style>
+
+<body>
+	
+    <h1> THIS IS A JAVASCRIPT VALIDATION FORM </h1>
+
+    <div class="div1">
+
+        <form id="form1">
+            EMAIL ID : <input type="text" id="email" placeholder="xyz@gmail.com"> <br> <br>
+            Password : <input type="password" id="password" placeholder="**********"> <br> <br>
+            Phone No : <input type="number" id="phone" placeholder="10 digit number"> <br> <br>   
+            <input type="submit" id="button" value="Click Here To Submit" onclick="validate()">        
+        </form>
+
+
+
+    </div>
+
+	<script type="text/javascript">
+		function validate() {
+			var emailStr = document.getElementById('email').value;
+
+			if(emailStr.indexOf('@') == -1){
+				alert('Invalid email');
+			}
+
+			var passStr = document.getElementById('password').value;
+
+			if(passStr.length < 6){
+				alert('Minimum password length should be 6');
+            }
+            
+            var numstr = document.getElementById('phone').value
+
+            if(numstr.length != 10)
+                alert("Enter a valid 10 digit number")
+		}
+
+	</script>
+</body>
+</html>
